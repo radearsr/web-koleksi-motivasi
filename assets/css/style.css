@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+/* =============================================== */
+/* ===================== Navbar ================== */
+/* =============================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+  height: 60px;
+  padding: 0 20px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  transition: top 1s ease;
+}
+
+nav ul {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+nav .logo {
+  font-size: 1.6em;
+  color: black;
+}
+
+.menu {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 10px 0;
+  font-size: 1.2em;
+  opacity: 0.6;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active .underline {
+  animation: activeEfect 0.7s forwards;
+}
+
+.underline {
+  height: 0;
+  background-color: black;
+  width: 0;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  transition: 0.7s;
+}
+
+.menu:hover {
+  opacity: 1;
+}
+
+.menu:hover .underline {
+  animation: activeEfect 0.7s forwards;
+}
+
+/*Nav Menu */
+.menu-toggle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 10px;
+  background-color: #5182ff;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 35px;
+  background-color: white;
+  display: block;
+  transition: 0.5s;
+}
+
+.menu-toggle span:nth-child(1) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 100%;
+}
+
+.toggle-on {
+  border: 2px solid white;
+}
+
+.toggle-on span:nth-child(1) {
+  transform: rotate(40deg) translate(-1px, -6px);
+}
+
+.toggle-on span:nth-child(2) {
+  transform: rotate(-45deg) translate(-1px, 6px);
+}
+
+@keyframes activeEfect {
+  0% {
+    width: 0;
+    height: 4px;
+  }
+  100% {
+    height: 4px;
+    width: 130%;
+  }
+}
+
+/* =============================================== */
+/* =================== Jumbotron ================= */
+/* =============================================== */
+.jumbotron {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.title {
+  width: 48%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title,
+.content-title,
+.profile-title {
+  color: #0a1931;
+}
+
+.title span,
+.content-title span,
+.profile-title span {
+  color: rgb(33, 95, 255);
+}
+
+.title h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-family: cursive;
+  font-style: italic;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title p {
+  color: rgb(136, 136, 136);
+  font-size: 1em;
+}
+
+.btn-start {
+  align-self: center;
+  background-color: white;
+  border: 2px solid #5182ff;
+  color: black;
+  padding: 15px;
+  border-radius: 40px;
+  width: 30%;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+a.btn-start {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-start:hover {
+  background-color: #5182ff;
+  color: white;
+}
+
+.ilustrasi {
+  width: 50%;
+  display: flex;
+}
+
+.ilustrasi img {
+  width: 100%;
+  align-self: center;
+}
+
+/* =============================================== */
+/* =================== Contents ==================*/
+/* =============================================== */
+.content-title {
+  font-size: 2.4em;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+  margin: 40px;
+  font-family: cursive;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#koleksi {
+  padding-top: 20px;
+}
+
+.card {
+  width: 45%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    0deg,
+    rgba(33, 95, 255, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  overflow: hidden;
+  margin-bottom: 80px;
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px 0 #5182ff85;
+}
+
+.card p {
+  text-align: center;
+  /* font-weight: bold; */
+  font-size: 1.4em;
+  color: #0a1931;
+}
+
+.card q {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.card img {
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 10px 0 10px 0;
+  border: 10px double rgba(74, 75, 75, 0.644);
+  filter: grayscale(100%);
+}
+
+.content-item {
+  padding: 10px;
+}
+
+/* =============================================== */
+/* ==================== Biodata ==================*/
+/* =============================================== */
+
+.biodata {
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  background: linear-gradient(
+    to right bottom,
+    #185adb,
+    #004aae,
+    #003a83,
+    #022958,
+    #0a1931
+  );
+  transition: 0.5s;
+}
+
+.biodata:hover {
+  box-shadow: 0 10px 40px 0 #729aff;
+  transform: translateY(-10px);
+}
+
+.biodata a {
+  background-color: #ffc947;
+  color: #efefef;
+  text-decoration: none;
+  padding: 20px;
+  width: 40%;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 8px #815a00;
+}
+
+.biodata a:active {
+  box-shadow: none;
+  position: relative;
+  top: 8px;
+}
+
+.biodata h3 {
+  font-size: 1.5em;
+}
+
+.profile-title {
+  font-size: 2.4em;
+  font-family: cursive;
+  color: #efefef;
+}
+
+.img-profile {
+  width: 200px;
+  border-radius: 50%;
+  border: 6px solid #efefef;
+}
+
+article h3 {
+  color: #efefef;
+  font-size: 1.4em;
+}
+
+.biodata table {
+  margin: 20px auto;
+  color: #efefef;
+}
+
+table tr th {
+  padding: 10px;
+  text-align: left;
+}
+
+table tr td {
+  text-align: left;
+}
+
+/* =============================================== */
+/* =================== Footer =================*/
+/* =============================================== */
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  background-color: #185adb;
+  margin-top: -4px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 1.2em;
+  color: #efefef;
+}
+
+footer p a {
+  color: white;
+  font-weight: bold;
+}

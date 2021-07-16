@@ -1,0 +1,150 @@
+@media screen and (max-width: 767px) {
+  /* =============================================== */
+  /* ==================== Header ===================*/
+  /* =============================================== */
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    background-color: #5182ff;
+    width: 50%;
+    height: 100vh;
+    justify-content: space-evenly;
+    z-index: -1;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.8s;
+  }
+
+  ul.slide {
+    transform: translateX(0);
+  }
+
+  .menu {
+    color: white;
+  }
+
+  .underline {
+    background-color: white;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .jumbotron {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 2.2em;
+    width: 100%;
+  }
+
+  .title p {
+    font-size: 0.8em;
+  }
+
+  .ilustrasi {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .btn-start {
+    width: 50%;
+  }
+
+  /* =============================================== */
+  /* ===================== Main ====================*/
+  /* =============================================== */
+  .card {
+    width: 100%;
+    margin: 40px 5px;
+  }
+
+  .card img {
+    width: 40%;
+  }
+
+  .card p {
+    font-size: 1.2em;
+  }
+
+  .biodata {
+    width: 98%;
+    padding: 10px 0;
+    margin: 20px auto;
+  }
+
+  .biodata h3 {
+    font-size: 1.1em;
+  }
+
+  .img-profile {
+    width: 180px;
+  }
+
+  /* =============================================== */
+  /* ==================== Footer ===================*/
+  /* =============================================== */
+  footer p {
+    font-size: 0.9em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* =============================================== */
+  /* ==================== Header ===================*/
+  /* =============================================== */
+  nav ul {
+    width: 50%;
+  }
+
+  .jumbotron {
+    padding-top: 100px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 2.2em;
+    width: 100%;
+  }
+
+  .title p {
+    font-size: 0.9em;
+  }
+
+  .ilustrasi {
+    width: 100%;
+  }
+
+  .btn-start {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  /* =============================================== */
+  /* ===================== Main ====================*/
+  /* =============================================== */
+  .biodata {
+    width: 80%;
+  }
+
+  /* =============================================== */
+  /* ==================== Footer ===================*/
+  /* =============================================== */
+}
